@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>The digital photocopier</title>
+  </head>
+
+  <body>
+    <h1>The digital photocopier</h1>
+    <p>
+      Upload an image and get it back in photocopied form. Useful in situations where you have to put your signature on something, you don't want to waste paper,
+      you have mspaint available, but the recipient of the signature insists that you send something that looks like it has been scanned. Here's an <a href="Example.png">example output</a>.
+    </p>
+    <div class="pb-4">
+      <form id="form" enctype="multipart/form-data">
+        <div class="input-group col-sm-3">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="file-input" name="file" accept=".png, .jpg, .jpeg" required>
+            <label class="custom-file-label" for="file-input">Choose image...</label>
+          </div>
+          <button id="button" class="btn btn-primary col-sm-3">Process</button>
+        </div>
+      </form>
+    </div>
+    <div id="status-processing" class="alert alert-info col-sm-3" role="alert">Processing</div>
+    <div id="status-error" class="alert alert-danger col-sm-3" role="alert">Error</div>
+    <div id="status-success" class="alert alert-success col-sm-3" role="alert">Success</div>
+    <img id="result" src="" />
+    <script>
+  </script>
+  </body>
+</html>
