@@ -1,8 +1,12 @@
-FROM golang:1.11.5-alpine
-RUN apk --update add imagemagick
-RUN mkdir /app 
-ADD . /app/ 
-WORKDIR /app
-EXPOSE 8000
+FROM golang:1.11.5-alpine as builder
+WORKDIR /build
+COPY . . 
 RUN go build -o main .
-CMD ["/app/main"]
+
+FROM alpine
+EXPOSE 8000
+WORKDIR /root
+RUN apk --update add imagemagick
+COPY --from=builder /build/main .
+COPY tmpl tmpl
+CMD ["./main"]
