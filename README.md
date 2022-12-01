@@ -1,3 +1,5 @@
+**Note**: There's now a Wasm based version of this thing available in [the photocopy-wasm repository](https://github.com/fuglede/photocopy-wasm/) -- in particular, you can try it out on https://photocopy.fuglede.dk/
+
 # Photocopy
 
 Have you ever had to send in a signature, been annoyed about the process of printing a piece of paper to write your signature on it, only to immediately throw away the paper after scanning it, when you could just as well have written your signature in paint and sent the result, only it looks just a little bit too clean and forged that way? Then you've come to the right place!
